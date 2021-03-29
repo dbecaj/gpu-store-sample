@@ -26,8 +26,10 @@ public class RatingResource {
                     .build();
         }
 
-        em.getTransaction().begin();
         article.setRating(updatedArticle.getRating());
+
+        em.getTransaction().begin();
+        em.persist(article);
         em.getTransaction().commit();
 
         return Response.status(Response.Status.ACCEPTED).entity(article).build();

@@ -1,5 +1,8 @@
 package me.dbecaj.gpu_store.models;
 
+import org.eclipse.persistence.annotations.Cache;
+import org.eclipse.persistence.annotations.CacheType;
+
 import javax.persistence.*;
 
 @Entity

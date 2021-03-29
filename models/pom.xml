@@ -13,18 +13,6 @@
 
     <name>GPU Store - Models</name>
     <description>Data models for GPU Store</description>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>15</source>
-                    <target>15</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>

@@ -1,4 +1,6 @@
 import me.dbecaj.gpu_store.models.Article;
+import org.eclipse.persistence.config.CacheUsage;
+import org.eclipse.persistence.config.QueryHints;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -17,11 +19,15 @@ public class ArticlesResource {
 
     @GET
     public Response getArticles() {
+        // Clear cache so we get current data (other services can update data)
+        em.getEntityManagerFactory().getCache().evictAll();
+
         List<Article> articles = em
                 .createNamedQuery("Article.findAll", Article.class)
+                .setHint(QueryHints.CACHE_USAGE, CacheUsage.DoNotCheckCache)
                 .getResultList();
 
-        return Response.ok(articles).build();
+        return Response.ok(articles).header("Access-Control-Allow-Origin", "*").build();
     }
 
     @POST
