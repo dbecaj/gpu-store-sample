@@ -1,0 +1,11 @@
+.appHeader {
+  background-color: mediumseagreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.articleContainer {
+  margin-bottom: 150px;
+}

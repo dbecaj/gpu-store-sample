@@ -1,0 +1,31 @@
+.articleItem {
+  display: flex;
+  margin: 20px;
+  justify-content: center;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.image {
+  width: 500px;
+  height: 226px;
+  margin: 20px;
+}
+
+.price {
+  margin: 0;
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+.name {
+  margin: 0;
+}
+
+.rating {
+  margin-top: auto;
+}
